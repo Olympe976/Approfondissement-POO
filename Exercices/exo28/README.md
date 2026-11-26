@@ -1,27 +1,23 @@
-# Exercice 28 : Biens immobiliers
+# Exercice 28 : Conception de la hiérarchie d'un système
 
-## Énoncé (résumé)
+Séquence 2, Objectif 2.2 : Mettre en œuvre l'héritage et le polymorphisme.
 
-Une classe `Bien` (adresse, loyer mensuel) calcule des charges égales à 10 % du loyer. Deux sous-classes ajoutent leur supplément :
+## Énoncé
 
-- `Appartement` : 2 000 FCFA par étage ;
-- `Villa` : 100 FCFA par m² de jardin.
+Concevoir la hiérarchie d'un système de location immobilière :
 
-Un loyer négatif ou nul est refusé. La classe `Main` crée un bien de chaque type et affiche ses charges.
+- `Bien` (adresse, loyer mensuel)
+- `Appartement` (étage)
+- `Villa` (surface du jardin)
 
-## Notions abordées
+Préciser les attributs, les constructeurs, et une méthode `calculerCharges()` redéfinie différemment dans chaque sous-classe.
 
-- Héritage (`extends`) et constructeur parent (`super(...)`)
-- Redéfinition de méthode (`@Override`) en réutilisant le calcul parent (`super.calculerCharges()`)
-- Polymorphisme : un tableau `Bien[]` contenant des `Appartement` et des `Villa`
-- Encapsulation et validation dans le constructeur
+## Règles de calcul retenues
 
-## Compiler et lancer
+- `Bien` : charges égales à 10 % du loyer ; un loyer négatif ou nul est refusé
+- `Appartement` : charges de base + 2 000 FCFA par étage
+- `Villa` : charges de base + 100 FCFA par m² de jardin
 
-```
-cd Exercices/exo28
-javac -d out src/*.java
-java -cp out Main
-```
+## Résultat attendu
 
-Résultat attendu : charges de 21 000 FCFA pour l'appartement et de 70 000 FCFA pour la villa.
+Charges de 21 000 FCFA pour l'appartement (loyer 150 000, 3e étage) et de 70 000 FCFA pour la villa (loyer 500 000, jardin de 200 m²).

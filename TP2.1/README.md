@@ -1,22 +1,11 @@
-# TP 2.1 : Classes, objets et encapsulation
+# TP 2.1 : Gestion des étudiants
 
-## Énoncé (résumé)
+Séquence 2, Objectif 2.1 : Concevoir des classes et manipuler des objets (Exercice 24).
 
-Modéliser un `Etudiant` (matricule, nom, prénom, date de naissance, moyenne) et une `Promotion` de capacité fixe stockée dans un tableau. La promotion permet d'ajouter un étudiant (sans doublon), de le rechercher ou le supprimer par matricule et de calculer la moyenne générale. Les données invalides sont refusées par une exception.
+## Énoncé
 
-## Notions abordées
-
-- Encapsulation : attributs `private`, accesseurs (getters)
-- Constructeur avec validation des paramètres (`IllegalArgumentException`, `IllegalStateException`)
-- Attribut `final` (matricule non modifiable) et attribut `static` (compteur d'étudiants créés)
-- Redéfinition de `toString`, `equals` et `hashCode` (`@Override`)
-- Composition : une `Promotion` contient un tableau d'`Etudiant`
-- Gestion des exceptions avec `try` / `catch`
-
-## Compiler et lancer
-
-```
-cd TP2.1
-javac -encoding UTF-8 -d out src/sn/ucad/esp/glsi/tp21/*.java
-java -Dstdout.encoding=UTF-8 -cp out sn.ucad.esp.glsi.tp21.Main
-```
+1. Créer le package `sn.ucad.esp.glsi.tp21` et y écrire la classe `Etudiant` (matricule, nom, prénom, date de naissance, moyenne ; les champs sont privés) avec un constructeur qui valide les données, et les méthodes `toString`, `equals` (sur le matricule) et `hashCode`.
+2. Écrire une classe `Promotion` qui contient un tableau d'étudiants de taille fixe et les fonctionnalités `ajouter`, `rechercherParMatricule` et `moyenneGenerale`. L'égalité de deux étudiants porte sur le matricule.
+3. Écrire un `main()` qui crée cinq étudiants, les ajoute, affiche la promotion, puis recherche un matricule existant et un autre inexistant.
+4. Vérifier que la tentative de créer un étudiant avec une moyenne de 25 est refusée (levée d'exception).
+5. Ajouter un compteur statique du nombre d'étudiants créés et l'afficher.

@@ -1,27 +1,12 @@
-# TP 2.2 : Héritage et polymorphisme
+# TP 2.2 : Gestion de la hiérarchie de formes et d'employés
 
-## Énoncé (résumé)
+Séquence 2, Objectif 2.2 : Mettre en œuvre l'héritage et le polymorphisme (Exercice 30).
 
-Deux exercices :
+## Énoncé
 
-- **Ressources humaines** (package `rh`) : une classe `Employe` et ses sous-classes `Manager` (prime), `Vendeur` (commission sur les ventes), `Stagiaire` (moitié du salaire) et `Directeur` (prime de 20 %). La classe `Paie` calcule la masse salariale, la catégorie de chaque employé et l'employé le mieux payé.
-- **Formes** (package `formes`) : une classe `Forme` et ses sous-classes `Cercle` et `Rectangle`, chacune calculant son aire. On provoque ensuite une `ClassCastException` puis on la corrige avec `instanceof`.
-
-## Notions abordées
-
-- Héritage (`extends`) et appel au constructeur parent (`super(...)`)
-- Visibilité `protected`
-- Redéfinition de méthode (`@Override`) et réutilisation avec `super.methode()`
-- Polymorphisme et liaison dynamique : un tableau `Employe[]` ou `Forme[]` contient des objets de sous-classes différentes
-- Type réel d'un objet avec `getClass()`
-- Transtypage (cast), `ClassCastException` et `instanceof` avec pattern matching
-- `switch` avec pattern matching sur les types
-
-## Compiler et lancer
-
-```
-cd TP2.2
-javac -encoding UTF-8 -d out src/sn/ucad/esp/glsi/rh/*.java src/sn/ucad/esp/glsi/formes/*.java
-java -Dstdout.encoding=UTF-8 -cp out sn.ucad.esp.glsi.rh.Paie
-java -Dstdout.encoding=UTF-8 -cp out sn.ucad.esp.glsi.formes.Main
-```
+1. Reprendre les classes `Employe`, `Manager`, `Vendeur`, `Paie` du cours et vérifier la sortie indiquée.
+2. Ajouter `Stagiaire` (salaire égal à la moitié du salaire de base) et un `Directeur` dont la prime est de 20 % du salaire de base.
+3. Mettre à jour la méthode `main()`.
+4. Écrire une méthode `plusPaye(Employe[])` qui renvoie l'employé ayant le salaire le plus élevé.
+5. Dans un deuxième package, créer une hiérarchie `Forme` → `Cercle`, `Rectangle` avec une méthode `aire()` redéfinie. Calculer la somme des aires d'un tableau de formes.
+6. Provoquer volontairement une `ClassCastException`, puis la corriger avec `instanceof`.

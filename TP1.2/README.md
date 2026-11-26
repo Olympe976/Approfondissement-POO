@@ -1,31 +1,18 @@
-# TP 1.2 : Prise en main du débogueur
+# TP 1.2 : Installation des IDE et réalisation d'un micro-projet
 
-## Énoncé (résumé)
+Séquence 1, Objectif 1.2 : Installer et utiliser un environnement de développement intégré (IDE).
 
-Écrire une méthode qui calcule la somme des entiers de 1 à n, puis suivre son exécution avec le débogueur de l'IDE : poser un point d'arrêt dans la boucle, avancer pas à pas et observer l'évolution des variables `i` et `total`.
+## Énoncé
 
-## Notions abordées
+1. Installer IntelliJ IDEA Community, Eclipse, Apache NetBeans et Visual Studio Code (avec l'extension Java). Au minimum deux IDE sont nécessaires.
+2. Dans chaque IDE installé, créer le projet `tp12` et y ajouter la classe `Somme` (package `sn.ucad.esp.glsi.tp12`), qui calcule la somme des entiers de 1 à n.
+3. Exécuter, puis déboguer avec un point d'arrêt sur la ligne `total += i;`. Capturer l'écran du débogueur.
+4. Créer volontairement une erreur (retirer le `;`) et observer la signalisation dans l'IDE.
+5. Corriger l'erreur.
+6. Importer dans un deuxième IDE le projet créé dans le premier (le dossier `src` suffit).
 
-- Méthode `static` et méthode `main`
-- Organisation en package (`sn.ucad.esp.glsi.tp12`) et projet Maven
-- Débogage : point d'arrêt, exécution pas à pas, inspection des variables
-
-## Compiler et lancer
-
-Avec `javac` / `java` :
-
-```
-cd TP1.2
-javac -d out src/main/java/sn/ucad/esp/glsi/tp12/Somme.java
-java -cp out sn.ucad.esp.glsi.tp12.Somme
-```
-
-Avec Maven :
+## Résultat attendu
 
 ```
-cd TP1.2
-mvn compile
-java -cp target/classes sn.ucad.esp.glsi.tp12.Somme
+Somme de 1 a 10 = 55
 ```
-
-Résultat attendu : `Somme de 1 a 10 = 55`
