@@ -1,0 +1,51 @@
+# Fichiers compiles
+*.class
+out/
+bin/
+target/
+build/
+
+# Archives
+*.jar
+*.war
+*.ear
+!.mvn/wrapper/maven-wrapper.jar
+
+# Maven / Gradle
+.mvn/
+.gradle/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+
+# VS Code
+.vscode/
+
+# Journaux et fichiers temporaires
+*.log
+hs_err_pid*
+
+# Configuration locale (mots de passe)
+db.properties
+*.env
+
+# Systeme
+.DS_Store
+Thumbs.db
+desktop.ini
